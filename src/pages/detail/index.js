@@ -2,6 +2,16 @@
 import r2 from 'wxapp-r2';
 import timeago from 'timeago.js';
 
+class Hello{
+  constructor(){
+
+  }
+  test(){
+
+  }
+}
+
+
 Page({
   data: {
     post: {}

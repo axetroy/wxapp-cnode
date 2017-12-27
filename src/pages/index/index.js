@@ -1,6 +1,16 @@
 //index.js
 import r2 from 'wxapp-r2';
 
+class Bcd{
+  constructor(){
+
+  }
+  test(){
+
+  }
+}
+
+
 Page({
   data: {
     posts: []

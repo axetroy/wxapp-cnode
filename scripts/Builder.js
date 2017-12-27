@@ -7,16 +7,36 @@ class Builder {
   constructor() {
     this.files = {};
   }
+
+  /**
+   * 清空文件
+   */
   clear() {
     this.files = {};
   }
+
+  /**
+   * 加载文件
+   * @param filePath  文件的绝对路径
+   */
   load(filePath) {
     this.files[filePath] = 1;
   }
+
+  /**
+   * 卸载文件
+   * @param filePath 文件的绝对路径
+   */
   unload(filePath) {
     this.files[filePath] = null;
     delete this.files[filePath];
   }
+
+  /**
+   * compile
+   * 默认的compile只会复制文件
+   * @returns {Promise.<void>}
+   */
   async compile() {
     const files = Object.keys(this.files);
     while (files.length) {
