@@ -204,7 +204,7 @@ class JsBuilder extends Builder {
       // 把各文件移动到build目录下
       const files = [].concat(Object.keys(this.files));
 
-      webpackModule.pack(
+      await webpackModule.pack(
         BUNDLE_PATH,
         [
           new webpack.DefinePlugin({
